@@ -1,0 +1,20 @@
+{
+  "name": "v_dir_list",
+  "version": "1.0.0",
+  "description": "[.v.] Node Directory listing using readdir() from fs module.",
+  "main": "dirList.js",
+  "scripts": {
+    "test": "node dirList.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/V-tech-tools/v_dir_list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/V-tech-tools/v_dir_list/issues"
+  },
+  "homepage": "https://github.com/V-tech-tools/v_dir_list#readme"
+}
