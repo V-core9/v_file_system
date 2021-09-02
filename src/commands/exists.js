@@ -1,10 +1,20 @@
-const {Command, flags} = require('@oclif/command')
+/*jshint esversion: 8 */
+const {Command, flags} = require('@oclif/command');
+const vExists = require('../v_exists');
 
 class ExistsCommand extends Command {
   async run() {
-    const {flags} = this.parse(ExistsCommand)
-    const name = flags.name || 'world'
-    this.log(`hello ${name} from C:\\Users\\v__V_\\_V_\\v_fs\\src\\commands\\exists.js`)
+    const {flags} = this.parse(ExistsCommand);
+    const path = flags.path || null;
+
+    if ( path === null ) {
+      console.log('ERROR: --path flag empty value provided');
+      return false;
+    } else {
+      const result = vExists(path);
+      console.log(result);
+      return result;
+    }
   }
 }
 
@@ -14,7 +24,7 @@ Extra documentation goes here
 `
 
 ExistsCommand.flags = {
-  name: flags.string({char: 'n', description: 'name to print'}),
+  path: flags.string({char: 'p', description: 'path to check existence'}),
 }
 
-module.exports = ExistsCommand
+module.exports = ExistsCommand ;

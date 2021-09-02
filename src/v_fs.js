@@ -1,4 +1,4 @@
-/*jshint esversion: 6 */
+/*jshint esversion: 8 */
 const fs = require("fs");
 const vExists = require("./v_exists");
 const vIsDir = require("./v_is_dir");

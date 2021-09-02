@@ -1,4 +1,4 @@
-/*jshint esversion: 7 */
+/*jshint esversion: 8 */
 const fs = require('fs');
 const vExists = require ('./v_exists')
 
