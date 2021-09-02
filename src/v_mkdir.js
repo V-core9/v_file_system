@@ -16,16 +16,15 @@ const vMkDir = (path = null, recurse = false ) => {
   if (!vExists(path)){
     recurse = (recurse === true) ? true : false;
 
-    var status = fs.mkdir(path, { recursive: recurse }, (err) => {
-      if (err) {
-        console.warn(err);
-        return false;
-      }
-      //console.log('Directory created successfully!');
+    try {
+      const data = fs.mkdirSync(path, { recursive: recurse })
+      // Directory created successfully
+      console.log("Directory created successfully");
       return true;
-    });
-    
-    return status;
+    } catch (err) {
+      console.warn(err);
+      return false;
+    }
 
   } else {
     console.warn("WARNING: Can't make dir <_PATH='"+path+"'_> Already Exists!");
