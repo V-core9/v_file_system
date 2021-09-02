@@ -6,7 +6,7 @@ const vExists = require ('./v_exists')
 const vIsDir = (path = null) => {
 
   if (path === null ) {
-    console.warn("\nERROR: Function missing params >> vIsDir(path => NULL) :: path can not be empty value \n");
+    console.warn("ERROR: Function missing params >> vIsDir(path => NULL) :: path can not be empty value ");
     return false;
   } else {
 

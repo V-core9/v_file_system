@@ -1,8 +1,8 @@
 /*jshint esversion: 8 */
 const fs = require("fs");
-const vExists = require("./v_exists");
-const vIsDir = require("./v_is_dir");
-const vIsFile = require("./v_is_file");
+const vExists = require("./src/v_exists");
+const vIsDir = require("./src/v_is_dir");
+const vIsFile = require("./src/v_is_file");
 
 const v_fs =  {
 	
