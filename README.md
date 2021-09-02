@@ -28,8 +28,27 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`v_fs exists`](#v_fs-exists)
 * [`v_fs hello`](#v_fs-hello)
 * [`v_fs help [COMMAND]`](#v_fs-help-command)
+
+## `v_fs exists`
+
+Describe the command here
+
+```
+USAGE
+  $ v_fs exists
+
+OPTIONS
+  -n, --name=name  name to print
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/exists.js](https://github.com/V-core9/v_fs/blob/v1.2.1/src/commands/exists.js)_
 
 ## `v_fs hello`
 
