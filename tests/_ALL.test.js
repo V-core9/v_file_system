@@ -164,3 +164,14 @@ if (VfsTESTER.length === 0) {
 
 
 console.log(chalk.blackBright ( boxen( (  chalk.whiteBright.bold.bgGray(boxen(cliResponseTitle, { padding: 1, borderStyle: 'classic'} )) + "\n" + boxen( cliResponseMSG , {padding: 0, borderStyle: 'round', dimBorder: true}) + "\n" + boxen( cliResponseSTATUS , {padding: 1, borderStyle: 'bold'}) ) , { margin: 1, borderStyle: 'doubleSingle', align: 'center', float: 'left'}) ) );
+
+
+
+
+
+//!>========================================================<|
+//!==========================================================|
+
+//#> vMkDir( path ) TEST Section
+
+v_fs.vMkDir('tests/zzzzz');
