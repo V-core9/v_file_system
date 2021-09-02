@@ -50,32 +50,32 @@ const v_fs =  {
   //> -v- Make Directory - with or without recursion option
   // NOTE: Also will check if it exists so it does not even try
   //       to generate folders/directories that are present.
-  vMkDir( path ){
-    return vMkDir ( path );
+  vMkDir( path, req ){
+    return vMkDir ( path, req );
   },
   
-  vMakeDir( path ){
-    return this.vMkDir ( path );
+  vMakeDir( path, req ){
+    return this.vMkDir ( path, req );
   },
 
-  vNewDir( path ){
-    return this.vMkDir ( path );
+  vNewDir( path, req ){
+    return this.vMkDir ( path, req );
   },
 
-  vCreateDir( path ){
-    return this.vMkDir ( path );
+  vCreateDir( path, req ){
+    return this.vMkDir ( path, req );
   },
 
-  vNewFolder( path ){
-    return this.vMkDir ( path );
+  vNewFolder( path, req ){
+    return this.vMkDir ( path, req );
   },
 
-  vCreateFolder( path ){
-    return this.vMkDir ( path );
+  vCreateFolder( path, req ){
+    return this.vMkDir ( path, req );
   },
   
-  vMakeFolder( path ){
-    return this.vMkDir ( path );
+  vMakeFolder( path, req ){
+    return this.vMkDir ( path, req );
   },
   //!>--END OF -> [-.N31z52h3vx98sss4.-]
   //#> Folder Creation Methods... 90% alias but ok.
