@@ -106,8 +106,8 @@ console.log( );
 var VfsTESTER = [];
 
 testList.forEach( testItem => {
-  console.log(testItem.path);
-  console.log( );
+  //console.log(testItem.path);
+  //console.log( );
   
   var disabled = false;
 
@@ -160,15 +160,15 @@ console.log(VfsTESTER);
 
 var cliResponseSTATUS = "";
 var cliResponseMSG = "";
-var cliResponseTitle = chalk.whiteBright.bold.bgGray("TESTING RESULTS    -|-    TS@"+ Date.now() );
+var cliResponseTitle = chalk.whiteBright.bold.bgGray("📋 TESTING RESULTS            "+ Date.now() +" ⌚");
 
 if (VfsTESTER.length === 0) {
-  cliResponseMSG += chalk.blackBright.bold.bgWhite('MSG >> ') + "\n"+ "\n";
-  cliResponseMSG += chalk.cyanBright( wrap(  'All tests passed with! YEAAA :D Time for live server hahaha... Additionally you can look for more info about what is going on by using flags. Try starting with help to see what it is offering to you. Hope this text does some shit.', {width: 40}) );
+  cliResponseMSG += chalk.whiteBright.bold('  🔥 Testing Message >> ') + "\n";
+  cliResponseMSG += chalk.cyanBright( wrap(  'All tests passed with! YEAAA :D Time for live server hahaha... Additionally you can look for more info about what is going on by using flags. Try starting with help to see what it is offering to you.', {width: 50}) );
   
-  cliResponseSTATUS += chalk.blueBright.bold('> Number Of Errors               ') + chalk.bgGray.whiteBright.bold( '╣ '+ VfsTESTER.length + ' ╠') + chalk.white.bold(" \n\n");
-  cliResponseSTATUS += chalk.blueBright.bold('> Test Status:                    ') + chalk.white.bgBlue.bold(' OK ');
+  cliResponseSTATUS += chalk.blueBright.bold('🚨 Number Of Errors                  ') + chalk.bgGray.whiteBright.bold( '╣ '+ VfsTESTER.length + ' ╠') + chalk.white.bold(" \n\n");
+  cliResponseSTATUS += chalk.blueBright.bold('🚀 Test Status:                      ') + chalk.black.bgGreen.bold('✅ OK');
 }
 
 
-console.log(chalk.blackBright ( boxen( (  chalk.whiteBright.bold.bgGray(boxen(cliResponseTitle, { padding: 1, borderStyle: 'classic'} )) + "\n" + boxen( cliResponseMSG , {padding: 1, borderStyle: 'round', dimBorder: true}) + "\n" + boxen( cliResponseSTATUS , {padding: 1, borderStyle: 'bold'}) ) , { margin: 1, borderStyle: 'doubleSingle', align: 'center', float: 'left'}) ) );
+console.log(chalk.blackBright ( boxen( (  chalk.whiteBright.bold.bgGray(boxen(cliResponseTitle, { padding: 1, borderStyle: 'classic'} )) + "\n" + boxen( cliResponseMSG , {padding: 0, borderStyle: 'round', dimBorder: true}) + "\n" + boxen( cliResponseSTATUS , {padding: 1, borderStyle: 'bold'}) ) , { margin: 1, borderStyle: 'doubleSingle', align: 'center', float: 'left'}) ) );
