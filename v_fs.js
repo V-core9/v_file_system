@@ -10,6 +10,7 @@ const vExists = require("./src/v_exists");
 const vIsDir = require("./src/v_is_dir");
 const vIsFile = require("./src/v_is_file");
 const vMkDir = require("./src/v_mkdir");
+const vSave = require("./src/v_save");
 
 // !> v_fs  >> -v- File System Object
 const v_fs =  {
@@ -45,6 +46,7 @@ const v_fs =  {
     return vIsFile ( path );
   },
 
+  //> UIDST -:- [-.N31z52h3vx98sss4.-]
   //> -v- Make Directory - with or without recursion option
   // NOTE: Also will check if it exists so it does not even try
   //       to generate folders/directories that are present.
@@ -52,6 +54,44 @@ const v_fs =  {
     return vMkDir ( path );
   },
   
+  vMakeDir( path ){
+    return this.vMkDir ( path );
+  },
+
+  vNewDir( path ){
+    return this.vMkDir ( path );
+  },
+
+  vCreateDir( path ){
+    return this.vMkDir ( path );
+  },
+
+  vNewFolder( path ){
+    return this.vMkDir ( path );
+  },
+
+  vCreateFolder( path ){
+    return this.vMkDir ( path );
+  },
+  
+  vMakeFolder( path ){
+    return this.vMkDir ( path );
+  },
+  //!>--END OF -> [-.N31z52h3vx98sss4.-]
+  //#> Folder Creation Methods... 90% alias but ok.
+  
+  //=> Write content to path. 
+  //>> SAVE TO FILE  
+    vSave( path, content ){
+    return vSave ( path, content );
+  },
+
+  //*-ALIAS vSave()
+  vWriteFile( path, content ){
+    return this.vSave ( path, content );
+  },
+  //#> END OF -> Write content to path
+
 };
 
 module.exports = v_fs;

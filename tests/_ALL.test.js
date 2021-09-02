@@ -174,4 +174,45 @@ console.log(chalk.blackBright ( boxen( (  chalk.whiteBright.bold.bgGray(boxen(cl
 
 //#> vMkDir( path ) TEST Section
 
-v_fs.vMkDir('tests/zzzzz');
+var vMkDir1 = 'tests/zzzzz';
+var vMkDir2 = 'tests/zzzzz22/asdasd/sdasd/bin/us/yes';
+
+v_fs.vMkDir(vMkDir1);
+v_fs.vMkDir(vMkDir2);
+
+var vSave1 = vMkDir1 + '/vsave_demo_1.txt';
+var vSave2 = vMkDir2 + '/ZZZZZZZZZZZZZZ_demo_122.txt';
+
+var contentDEMO_XX112 = `History
+path <string> | <Buffer> | <URL>
+options <Object> | <integer>
+recursive <boolean> Default: false
+mode <string> | <integer> Not supported on Windows. Default: 0o777.
+Returns: <string> | <undefined>
+Synchronously creates a directory. Returns undefined, or if recursive is true, the first directory path created. This is the synchronous version of fs.mkdir().
+
+See the POSIX mkdir(2) documentation for more details.
+
+fs.mkdtempSync(prefix[, options])#
+History
+prefix <string>
+options <string> | <Object>
+encoding <string> Default: 'utf8'
+Returns: <string>
+Returns the created directory path.
+
+For detailed information, see the documentation of the asynchronous version of this API: fs.mkdtemp().
+
+The optional options argument can be a string specifying an encoding, or an object with an encoding property specifying the character encoding to use.
+
+fs.opendirSync(path[, options])#
+History
+path <string> | <Buffer> | <URL>
+options <Object>
+encoding <string> | <null> Default: 'utf8'
+bufferSize <number> Number of directory entries that are buffered internally when reading from the directory. Higher values lead to better performance but higher memory usage. Default: 32
+Returns: <fs.Dir>
+Synchronously open a directory. See opendir(3).`
+
+v_fs.vSave(vSave1, contentDEMO_XX112);
+v_fs.vSave(vSave2, contentDEMO_XX112)
