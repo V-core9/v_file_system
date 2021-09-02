@@ -14,10 +14,14 @@ const vMkDir = (path = null, recurse = false ) => {
   }
 
   if (!vExists(path)){
-    recurse = (recurse === true) ? true : false;
+    console.log("PATH NOT FOUND GOING TO MAKE IT...");
+
+    recurse = (recurse == true) ? true : false;
+
+    console.log("RECURSIVE >> "+ recurse );
 
     try {
-      const data = fs.mkdirSync(path, { recursive: recurse })
+      const data = fs.mkdirSync(path, { recursive: recurse } );
       // Directory created successfully
       console.log("Directory created successfully");
       return true;

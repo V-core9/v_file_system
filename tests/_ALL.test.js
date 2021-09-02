@@ -175,16 +175,22 @@ console.log(chalk.blackBright ( boxen( (  chalk.whiteBright.bold.bgGray(boxen(cl
 //#> vMkDir( path ) TEST Section
 
 var vMkDir1 = 'tests/zzzzz';
-var vMkDir2 = 'tests/zzzzz22/asdasd/sdasd/bin/us/yes';
+var vMkDir2 = 'tests/div_vv/bin/us/yes';
 
-v_fs.vMkDir(vMkDir1);
-v_fs.vMkDir(vMkDir2, {recursion : true});
 
+
+
+
+setTimeout(() => {
+  v_fs.vMkDir(vMkDir1);
+
+setTimeout(() => {
+  v_fs.vMkDir(vMkDir2 , true);
 
 setTimeout(() => {
   
   var vSave1 = vMkDir1 + '/vsave_demo_1.txt';
-  var vSave2 = vMkDir2 + '/ZZZZZZZZZZZZZZ_demo_122.txt';
+  var vSave2 = vMkDir2 + '/ZZZZZZZZZxx.txt';
 
   var contentDEMO_XX112 = `History
   path <string> | <Buffer> | <URL>
@@ -220,4 +226,8 @@ setTimeout(() => {
   v_fs.vSave(vSave1, contentDEMO_XX112);
   v_fs.vSave(vSave2, contentDEMO_XX112);
 
-}, 1000);
+}, 1500);
+
+}, 250);
+
+}, 100);
