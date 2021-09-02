@@ -11,8 +11,8 @@ const vIsFile = (path = null) => {
   } else {
 
     if (vExists(path)){
-      var helpIsDir = fs.lstatSync(path).isFile();
-      return helpIsDir;
+      var helpIsFile = fs.lstatSync(path).isFile();
+      return helpIsFile;
     } else {
       return false;
     }
