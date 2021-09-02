@@ -31,6 +31,8 @@ USAGE
 * [`v_fs exists`](#v_fs-exists)
 * [`v_fs hello`](#v_fs-hello)
 * [`v_fs help [COMMAND]`](#v_fs-help-command)
+* [`v_fs is_dir`](#v_fs-is_dir)
+* [`v_fs is_file`](#v_fs-is_file)
 
 ## `v_fs exists`
 
@@ -41,7 +43,7 @@ USAGE
   $ v_fs exists
 
 OPTIONS
-  -n, --name=name  name to print
+  -p, --path=path  path to check existence
 
 DESCRIPTION
   ...
@@ -84,4 +86,40 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.3/src/commands/help.ts)_
+
+## `v_fs is_dir`
+
+Describe the command here
+
+```
+USAGE
+  $ v_fs is_dir
+
+OPTIONS
+  -n, --name=name  name to print
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/is_dir.js](https://github.com/V-core9/v_fs/blob/v1.2.1/src/commands/is_dir.js)_
+
+## `v_fs is_file`
+
+Describe the command here
+
+```
+USAGE
+  $ v_fs is_file
+
+OPTIONS
+  -n, --name=name  name to print
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/is_file.js](https://github.com/V-core9/v_fs/blob/v1.2.1/src/commands/is_file.js)_
 <!-- commandsstop -->

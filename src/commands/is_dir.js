@@ -1,30 +1,30 @@
 /*jshint esversion: 8 */
 const {Command, flags} = require('@oclif/command');
-const vExists = require('../v_exists');
+const vIsDir = require('../v_is_dir');
 
-class ExistsCommand extends Command {
+class IsDirCommand extends Command {
   async run() {
-    const {flags} = this.parse(ExistsCommand);
+    const {flags} = this.parse(IsDirCommand);
     const path = flags.path || null;
 
     if ( path === null ) {
       console.log('ERROR: --path flag empty value provided');
       return false;
     } else {
-      const result = vExists(path);
+      const result = vIsDir(path);
       console.log(result);
       return result;
     }
   }
 }
 
-ExistsCommand.description = `Describe the command here
+IsDirCommand.description = `Will check if PATH is DIR
 ...
 Extra documentation goes here
 `
 
-ExistsCommand.flags = {
-  path: flags.string({char: 'p', description: 'path to check EXIST'}),
+IsDirCommand.flags = {
+  path: flags.string({char: 'p', description: 'path to check if is DIR'}),
 }
 
-module.exports = ExistsCommand ;
+module.exports = IsDirCommand ;
