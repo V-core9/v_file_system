@@ -19,6 +19,7 @@ const isBadRequest = (functionName = null, path = null ) => {
 //<_i_> vIsDir() --  check if directory exists
 const vIsDir = (path = null) => {
 
+  //-> CHECK ME OUT!!!
   if (isBadRequest('vIsDir', path)) return false;
 
   var helpIsDir = fs.lstatSync(path).isDirectory();
