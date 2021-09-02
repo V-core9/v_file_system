@@ -3,50 +3,12 @@
   "description": "-v- dev tools fs module. Basically [Try & Catch] it will just capture errors by default, check for existing file/folder...check for permissions...etc. SO it's just offering less on-the-spot handling of thing by providing functions/methods with built in checks.",
   "version": "1.2.1",
   "author": "_⧋V⧋_",
-  "bin": {
-    "v_fs": "./bin/run"
-  },
   "bugs": "https://github.com/V-core9/v_fs/issues",
-  "dependencies": {
-    "@oclif/command": "^1.8.0",
-    "@oclif/config": "^1.17.0",
-    "@oclif/plugin-help": "^3.2.3"
-  },
-  "devDependencies": {
-    "@oclif/dev-cli": "^1.26.0",
-    "eslint": "^5.16.0",
-    "eslint-config-oclif": "^3.1.0",
-    "globby": "^10.0.2",
-    "rimraf": "^3.0.2"
-  },
-  "engines": {
-    "node": ">=8.0.0"
-  },
-  "files": [
-    "/bin",
-    "/npm-shrinkwrap.json",
-    "/oclif.manifest.json",
-    "/src"
-  ],
   "homepage": "https://github.com/V-core9/v_fs",
-  "keywords": [
-    "oclif"
-  ],
   "license": "MIT",
-  "main": "src/index.js",
-  "oclif": {
-    "commands": "./src/commands",
-    "bin": "v_fs",
-    "plugins": [
-      "@oclif/plugin-help"
-    ]
-  },
+  "main": "v_fs.js",
   "repository": "V-core9/v_fs",
   "scripts": {
-    "postpack": "rimraf oclif.manifest.json",
-    "posttest": "eslint .",
-    "prepack": "oclif-dev manifest && oclif-dev readme",
-    "test": "echo NO TESTS",
-    "version": "oclif-dev readme && git add README.md"
+    "test": "node tests/_ALL.test.js"
   }
 }
