@@ -1,6 +1,6 @@
 /*jshint esversion: 8 */
 const fs = require('fs');
-const vExists = require ('./v_exists')
+const vExists = require ('./v_exists');
 
 // check if directory exists
 const vIsDir = (path = null) => {

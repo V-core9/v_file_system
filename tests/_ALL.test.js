@@ -82,26 +82,18 @@ const testList = [
 
 
 // console.log( v_fs.vExists(dir));
-
 console.log( v_fs.vExists('./src'));
-console.log( );
-
 console.log( v_fs.isThere('./LICENSE'));
-console.log( );
-
 console.log( v_fs.exists('./src/LICENSE'));
 console.log( );
-
-
 
 //-> v_fs.vIsFile(path) :: Checking if path provided is FILE.
 console.log( v_fs.vIsFile('LICENSE'));
 console.log( );
-
-
 //-> v_fs.vIsDir(path) :: Checking if path provided is DIRECTORY.
 console.log( v_fs.vIsDir('LICENSE'));
 console.log( );
+
 
 var VfsTESTER = [];
 

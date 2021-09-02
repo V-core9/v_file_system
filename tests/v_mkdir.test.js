@@ -19,6 +19,19 @@ setTimeout(() => {
 const vIsDir = require ('../src/v_is_dir');
 
 setTimeout(() => {
-  console.log(vIsDir(dirsList[0]));
-  console.log(vIsDir(dirsList[1]));
+
+  var errorList = [];
+
+  var help1 = vIsDir(dirsList[0]);
+  var help2 = vIsDir(dirsList[1]);
+
+  console.log("DIR_1 Found: " + help1);
+  console.log("DIR_2 Found: " + help2);
+
+  if ( help1 && help2 ) {
+    console.log('\nTEST_MSG :_: All Directories Found.');
+    console.log('vMkDir OK -><[_ No Errors _]>');
+  }
+
+
 }, 1000);
