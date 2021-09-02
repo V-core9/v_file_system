@@ -5,18 +5,20 @@
 // Include fs and path module
 const vMkDir = require('../src/v_mkdir');
 
+var dirsList = [ 'tests/testsZZ', 'tests/test/bin/js/co' ]
+
 setTimeout(() => {
-  vMkDir('testsZZ');
+  vMkDir(dirsList[0]);
 }, 150 );
 
 setTimeout(() => {
-  vMkDir('tests/test/bin/js/co', true);
+  vMkDir(dirsList[1], true);
 }, 300 );
 
 
 const vIsDir = require ('../src/v_is_dir');
 
 setTimeout(() => {
-  console.log(vIsDir('testsZZ'));
-  console.log(vIsDir('tests/test/bin/js/co'));
+  console.log(vIsDir(dirsList[0]));
+  console.log(vIsDir(dirsList[1]));
 }, 1000);
