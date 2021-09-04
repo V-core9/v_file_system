@@ -9,7 +9,8 @@
   "main": "v_fs.js",
   "repository": "V-core9/v_fs",
   "scripts": {
-    "test": "node tests/_ALL.test.js"
+    "test": "bash -c \" npm run v_test\"",
+    "v_test": "node tests/_ALL.test.js"
   },
   "devDependencies": {
     "boxen": "^5.0.1",
