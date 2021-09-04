@@ -1,3 +1,3 @@
-const devMode = false;
+const devMode = true;
 
 module.exports = devMode;

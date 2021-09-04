@@ -18,7 +18,7 @@ console.log(( isEmptyV('AAAA') === false ));
 console.log(( isEmptyV("YEAA") === false ));
 console.log(( isEmptyV("AAAA") === false ));
 //--< ALL WILL SHOW {TRUE} IF ALL IS OK >--->>>
-console.log("\n-!-< If ALL Show OK then OK >-!-->>>\n")
+console.log("\n-!-< If ALL Show TRUE then OK >-!-->>>\n")
 
 
 console.log("\n--< NOW THE NORMAL VERSION >--->>>\n")

@@ -1,18 +1,15 @@
 /*jshint esversion: 8 */
 const fs = require("fs");
-const [notEmptyPATH] = require("./helpers/empty_path");
+const [emptyPATH] = require("./helpers/empty_path");
 
 const vExists = (path = null) => {
-  if (notEmptyPATH(path)) {
-    console.log("vExists try->");
-    try {
-      var res = fs.existsSync(path);
-      return res;
-    } catch (err) {
-      console.warn(err);
-      return false;
-    }
-  } else {
+  if (emptyPATH(path)) return false;
+
+  console.log("vExists try->");
+  try {
+    return fs.existsSync(path);
+  } catch (err) {
+    console.warn(err);
     return false;
   }
 };
@@ -22,3 +19,7 @@ const vExistsNo = (path = null) => {
 };
 
 module.exports = [vExists, vExistsNo];
+
+vExists("src");
+vExists("./src");
+vExists("./src/");
