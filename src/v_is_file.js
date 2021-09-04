@@ -1,10 +1,17 @@
 /*jshint esversion: 8 */
 const fs = require("fs");
-const [ existIsBadRequest ] = require("./helpers/is-bad-req");
+const [vExists] = require("./v_exists");
 
 const vIsFile = (path = null) => {
-  if (existIsBadRequest("vIsFile", path)) return false;
-  return fs.lstatSync(path).isFile();
+  if (vExists(path)) {
+    try {
+      return fs.lstatSync(path).isFile();
+    } catch (err) {
+      console.warn(err);
+      return false;
+    }
+  }
+  return false;
 };
 
 module.exports = vIsFile;

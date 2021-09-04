@@ -1,13 +1,18 @@
 /*jshint esversion: 8 */
 const fs = require("fs");
-const [notExistIsBadRequest] = require("./helpers/is-bad-req");
+const [vExists] = require("./v_exists");
 
 const vIsDir = (path = null) => {
-  if (notExistIsBadRequest("vIsDir", path)) return false;
-
-  var helpIsDir = fs.lstatSync(path).isDirectory();
-  return helpIsDir;
-
+  if (vExists(path)) {
+    try {
+      return fs.lstatSync(path).isDirectory();
+    } catch (err) {
+      console.warn(err);
+      return false;
+    }
+  } else {
+    return false;
+  }
 };
 
 module.exports = vIsDir;

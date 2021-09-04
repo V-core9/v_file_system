@@ -114,41 +114,40 @@ testList.forEach((testItem) => {
   if (!disabled) {
     var isDirHelper = testItem.resultIs === "DIR" ? true : false; // ? TRUE -> if "DIR" expected.
     var isFileHelper = testItem.resultIs === "FILE" ? true : false; // ? TRUE -> if "FILE" set in resultIs.
-    var existsHelper =
-      isDirHelper == true || isFileHelper == true ? true : false; // ? TRUE -> If any of previous have value true then it exists.
+    var existsHelper = isDirHelper == true || isFileHelper == true ? true : false; // ? TRUE -> If any of previous have value true then it exists.
 
-    if (v_fs.vExists(testItem.path) != existsHelper) {
+    if (v_fs.vExists(testItem.path) !== existsHelper) {
       VfsTESTER.push({
         timestamp: Date.now(),
-        msg: "FALING CONIDITION >> [ vExists != existsHelper ] ",
+        msg: "FALING CONIDITION >> [ vExists !== existsHelper ] ",
         path: testItem.path,
       });
     }
-    if (v_fs.isThere(testItem.path) != existsHelper) {
+    if (v_fs.isThere(testItem.path) !== existsHelper) {
       VfsTESTER.push({
         timestamp: Date.now(),
-        msg: "FALING CONIDITION >> [ vExists != existsHelper ] ",
+        msg: "FALING CONIDITION >> [ vExists !== existsHelper ] ",
         path: testItem.path,
       });
     }
-    if (v_fs.exists(testItem.path) != existsHelper) {
+    if (v_fs.exists(testItem.path) !== existsHelper) {
       VfsTESTER.push({
         timestamp: Date.now(),
-        msg: "FALING CONIDITION >> [ vExists != existsHelper ] ",
+        msg: "FALING CONIDITION >> [ vExists !== existsHelper ] ",
         path: testItem.path,
       });
     }
-    if (v_fs.vIsDir(testItem.path) != isDirHelper) {
+    if (v_fs.vIsDir(testItem.path) !== isDirHelper) {
       VfsTESTER.push({
         timestamp: Date.now(),
-        msg: "FALING CONIDITION >> [ vIsDir != isDirHelper ] ",
+        msg: "FALING CONIDITION >> [ vIsDir !== isDirHelper ] ",
         path: testItem.path,
       });
     }
-    if (v_fs.vIsFile(testItem.path) != isFileHelper) {
+    if (v_fs.vIsFile(testItem.path) !== isFileHelper) {
       VfsTESTER.push({
         timestamp: Date.now(),
-        msg: "FALING CONIDITION >> [ vIsFile != isFileHelper ] ",
+        msg: "FALING CONIDITION >> [ vIsFile !== isFileHelper ] ",
         path: testItem.path,
       });
     }

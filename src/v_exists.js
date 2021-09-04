@@ -1,25 +1,24 @@
 /*jshint esversion: 8 */
-const devMode = false;
 const fs = require("fs");
-const [emptyPATH] = require("./helpers/empty_path");
-const error_messenger = require("./helpers/error_messenger");
+const [notEmptyPATH] = require("./helpers/empty_path");
 
-
-// Checking If PATH is not null then if exists.
 const vExists = (path = null) => {
-  if ( emptyPATH(path) ) return false;
-
-  var help = fs.existsSync(path);
-  if (help) {
-    return true;
+  if (notEmptyPATH(path)) {
+    console.log("vExists try->");
+    try {
+      var res = fs.existsSync(path);
+      return res;
+    } catch (err) {
+      console.warn(err);
+      return false;
+    }
   } else {
     return false;
   }
 };
 
-//-> Checking if exists then returning inverted value.
 const vExistsNo = (path = null) => {
-  return !vExists(path);
+  console.log(vExists(path));
 };
 
-module.exports = [ vExists, vExistsNo ];
+module.exports = [vExists, vExistsNo];

@@ -2,6 +2,8 @@
 
 const [vExistsNo] = require("../src/v_exists");
 
+console.log("\n<=] vExistsNo TESTING [=>>>>>>>\n")
+
 // directory to check if exists
 const dir = "./uploads";
 
@@ -30,3 +32,5 @@ console.log(vExistsNo("./src/package.json"));
 
 console.log(vExistsNo());
 console.log(vExistsNo());
+
+console.log("\n<=] END vExistsNo TESTING [=>>>>>>>\n")

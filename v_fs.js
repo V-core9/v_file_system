@@ -6,7 +6,7 @@
 const fs = require("fs");
 
 // !> Loading of the actual thing.
-const vExists = require("./src/v_exists");
+const [vExists, vExistsNo] = require("./src/v_exists");
 const vIsDir = require("./src/v_is_dir");
 const vIsFile = require("./src/v_is_file");
 const vMkDir = require("./src/v_mkdir");
@@ -32,6 +32,11 @@ const v_fs =  {
   exists(path){
     return this.vExists(path);
   },
+
+  vExistsNo( path ){
+    return vExistsNo( path );
+  },
+  
   //#> End Of Existence Checking 
   //#> [-.Nz22hJ441x98224.-]
 
