@@ -1,26 +1,24 @@
 /*jshint esversion: 8 */
+const devMode = false;
 const fs = require("fs");
+const [emptyPATH] = require("./helpers/empty_path");
+const error_messenger = require("./helpers/error_messenger");
 
-// check if directory exists
+
+// Checking If PATH is not null then if exists.
 const vExists = (path = null) => {
-  if (path === null) {
-    console.warn("ERROR: Function missing params >> vExists(path => NULL) :: path can not be empty value ");
-    return false;
+  if ( emptyPATH(path) ) return false;
+
+  var help = fs.existsSync(path);
+  if (help) {
+    return true;
   } else {
-    //console.info(`Checking PATH: '${path}' `);
-    if (fs.existsSync(path)) {
-      //console.log('Path found, exists!');
-      return true;
-    } else {
-      //console.log('Path not found.');
-      return false;
-    }
+    return false;
   }
 };
 
-
-const vExistsNo = (path) => {
-  console.log("Warning: No Results Found Using Provided PATH");
+//-> Checking if exists then returning inverted value.
+const vExistsNo = (path = null) => {
   return !vExists(path);
 };
 

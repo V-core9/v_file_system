@@ -1,6 +1,6 @@
 /*jshint esversion: 7 */
 
-const vExistsNo = require("../src/v_exists-no");
+const [vExistsNo] = require("../src/v_exists");
 
 // directory to check if exists
 const dir = "./uploads";
@@ -26,3 +26,7 @@ console.log(vExistsNo("./src/LICENSE"));
 console.log(vExistsNo("./src/.gitignore"));
 console.log(vExistsNo("./src/src/v_exists.js"));
 console.log(vExistsNo("./src/package.json"));
+
+
+console.log(vExistsNo());
+console.log(vExistsNo());

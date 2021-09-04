@@ -3,10 +3,15 @@ const [vExists, vExistsNo] = require("../v_exists");
 const [emptyPATH] = require("./empty_path");
 
 
-const isBadRequest = (functionName = null, path = null) => {
+const existIsBadRequest = (functionName = null, path = null) => {
+  if ( emptyPATH(functionName, path) || vExists(path)) return true;
+  return false;
+};
+
+const notExistIsBadRequest = (functionName = null, path = null) => {
   if ( emptyPATH(functionName, path) || vExistsNo(path)) return true;
   return false;
 };
 
 
-module.exports = isBadRequest;
+module.exports = [existIsBadRequest, notExistIsBadRequest] ;
