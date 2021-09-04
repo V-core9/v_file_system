@@ -4,9 +4,7 @@ const fs = require("fs");
 // check if directory exists
 const vExists = (path = null) => {
   if (path === null) {
-    console.warn(
-      "ERROR: Function missing params >> vExists(path => NULL) :: path can not be empty value "
-    );
+    console.warn("ERROR: Function missing params >> vExists(path => NULL) :: path can not be empty value ");
     return false;
   } else {
     //console.info(`Checking PATH: '${path}' `);
@@ -20,4 +18,10 @@ const vExists = (path = null) => {
   }
 };
 
-module.exports = vExists;
+
+const vExistsNo = (path) => {
+  console.log("Warning: No Results Found Using Provided PATH");
+  return !vExists(path);
+};
+
+module.exports = [ vExists, vExistsNo ];

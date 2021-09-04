@@ -25,3 +25,7 @@ console.log(vIsDir("bin"));
 console.log(vIsDir("node_modules"));
 console.log(vIsDir("src/commands"));
 console.log(vIsDir("./src/commands/"));
+
+console.log(vIsDir(""));
+console.log(vIsDir("."));
+console.log(vIsDir(""));

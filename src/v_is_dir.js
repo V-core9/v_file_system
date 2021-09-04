@@ -1,6 +1,6 @@
 /*jshint esversion: 8 */
 const fs = require("fs");
-const isBadRequest = require("./v_is-bad-req");
+const isBadRequest = require("./helpers/is-bad-req");
 
 //<!> emptyPATH ( <FUNCTION_NAME> *[req] , <PATH> *[req] )
 

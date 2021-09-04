@@ -1,22 +1,11 @@
 /*jshint esversion: 8 */
 const fs = require("fs");
-const vExists = require("./v_exists");
+const isBadRequest = require("./helpers/is-bad-req");
 
-// check if directory exists
+//<_i_> vIsFile() --  check if directory exists
 const vIsFile = (path = null) => {
-  if (path === null) {
-    console.warn(
-      "ERROR: Function missing params >> vIsFile(path => NULL) :: path can not be empty value "
-    );
-    return false;
-  } else {
-    if (vExists(path)) {
-      var helpIsFile = fs.lstatSync(path).isFile();
-      return helpIsFile;
-    } else {
-      return false;
-    }
-  }
+  if (isBadRequest("vIsFile", path)) return false;
+  return fs.lstatSync(path).isFile();
 };
 
 module.exports = vIsFile;
