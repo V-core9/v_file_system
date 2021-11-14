@@ -20,20 +20,16 @@ Well just load it as a constant...
     
     const v_fs = require('v_fs');
 
-    console.log(v_fs.version());
-
-    // ASYNC LIST - - - -
-    // Make Directory 
-    v_fs.mkdir(path, options = {}, callback = null) ;
-
-    // Write Content To File
-    v_fs.write(filePath, content,  callback = null, encoding = 'utf8') ;
+    // ASYNC  - - - -
     
-    // SYNC LIST - - - -
-    // Make Directory
+    v_fs.promise.mkdir(path, options = {}, callback = null) ;
+
+    v_fs.promise.write(filePath, content,  callback = null, encoding = 'utf8') ;
+    
+    // SYNC  - - - -
+    
     v_fs.sync.mkdir(path, recurse = false) ;
 
-    // Write Content To File
     v_fs.sync.write(filePath, content, encoding = 'utf8') ;
     
     ...
