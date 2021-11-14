@@ -7,7 +7,8 @@ const isFile = require('./is_file');
 const isDir = require('./is_dir');
 const deleteFile = require('./delete_file');
 const removeDir = require('./remove_dir');
-const dirStats = require('./dir_stats');
+const statsDir = require('./stats_dir');
+const statsFile = require('./stats_file');
 
 module.exports = {
   read,
@@ -18,5 +19,6 @@ module.exports = {
   isDir,
   deleteFile,
   removeDir,
-  dirStats
+  statsDir,
+  statsFile
 };

@@ -7,102 +7,117 @@ const demoFile = path.join(demoDir, 'sample_file.doc');
 const demoFile2 = path.join(demoDir, 'sample_file.txt');
 const testArray = ["sample_file.doc", "sample_file.txt"];
 
-mkdirPromise = async () => {
+mkdirPromiseTest = async () => {
     expect(await v_fs.promise.mkdir(demoFile)).toEqual(false);
     expect(await v_fs.promise.mkdir(demoDir)).toEqual(true);
     expect(await v_fs.promise.mkdir()).toEqual(false);
 };
 
-writePromise = async () => {
+writePromiseTest = async () => {
     expect(await v_fs.promise.write(demoFile, demoText)).toEqual(true);
     expect(await v_fs.promise.write(demoFile2, demoText)).toEqual(true);
     expect(await v_fs.promise.write(demoDir, demoText)).toEqual(false);
     expect(await v_fs.promise.write()).toEqual(false);
 };
 
-readPromise = async () => {
+readPromiseTest = async () => {
     expect(await v_fs.promise.read(demoFile)).toEqual(demoText);
     expect(await v_fs.promise.read(demoDir)).toEqual(false);
     expect(await v_fs.promise.read()).toEqual(false);
 };
 
 
-dirStats = async () => {
-    expect(await v_fs.promise.dirStats(demoFile)).toEqual(false);
+statsDirPromiseTest = async () => {
+    expect(await v_fs.promise.statsDir(demoFile)).toEqual(false);
 
     const fs = require('fs');
     const testVal = fs.statSync(demoDir);
-    expect(await v_fs.promise.dirStats(demoDir)).toEqual(testVal);
+    expect(await v_fs.promise.statsDir(demoDir)).toEqual(testVal);
 
-    expect(await v_fs.promise.dirStats()).toEqual(false);
+    expect(await v_fs.promise.statsDir()).toEqual(false);
 };
 
-isDirPromise = async () => {
+
+statsFilePromiseTest = async () => {
+    expect(await v_fs.promise.statsFile(demoFile)).toEqual(false);
+
+    const fs = require('fs');
+    const testVal = fs.statSync(demoFile);
+    expect(await v_fs.promise.statsFile(demoFile)).toEqual(testVal);
+
+    expect(await v_fs.promise.statsFile()).toEqual(false);
+};
+
+isDirPromiseTest = async () => {
     expect(await v_fs.promise.isDir(demoFile)).toEqual(false);
     expect(await v_fs.promise.isDir(demoDir)).toEqual(true);
     expect(await v_fs.promise.isDir()).toEqual(false);
 };
 
-isFilePromise = async () => {
+isFilePromiseTest = async () => {
     expect(await v_fs.promise.isFile(demoFile)).toEqual(true);
     expect(await v_fs.promise.isFile(demoDir)).toEqual(false);
     expect(await v_fs.promise.isFile()).toEqual(false);
 };
 
-listDirPromise = async () => {
+listDirPromiseTest = async () => {
     expect(await v_fs.promise.listDir(demoDir)).toEqual(testArray);
     expect(await v_fs.promise.listDir()).toEqual(false);
 };
 
-deleteFileTest = async () => {
+deleteFilePromiseTest = async () => {
     expect(await v_fs.promise.deleteFile(demoFile)).toEqual(true);
     expect(await v_fs.promise.deleteFile(demoDir)).toEqual(false);
     expect(await v_fs.promise.deleteFile()).toEqual(false);
   };
 
-removeDirTest = async () => {
+removeDirPromiseTest = async () => {
     expect(await v_fs.promise.removeDir(demoFile)).toEqual(false);
     expect(await v_fs.promise.removeDir(demoDir)).toEqual(true);
     expect(await v_fs.promise.removeDir()).toEqual(false);
 };
 
 test('mkdirPromise Test', async () => {
-  const mkdirRes = await mkdirPromise();
+  const mkdirRes = await mkdirPromiseTest();
 });
 
 test('writePromise Test', async () => {
-  const writeRes = await writePromise();
+  const writeRes = await writePromiseTest();
 });
 
 test('readPromise Test', async () => {
-  const readRes = await readPromise();
+  const readRes = await readPromiseTest();
+});
+
+test('statsDirPromise Test', async () => {
+  const dirStatsRes = await statsDirPromiseTest();
 });
 
 test('dirStats Test', async () => {
-  const dirStatsRes = await dirStats();
+  const fileStatsRes = await statsFilePromiseTest();
 });
 
 test('isDirPromise Test', async () => {
-  const isDirRes = await isDirPromise();
+  const isDirRes = await isDirPromiseTest();
 });
 
 test('isFilePromise Test', async () => {
-  const isFileRes = await isFilePromise();
+  const isFileRes = await isFilePromiseTest();
 });
 
 
 test('listDirPromise Test', async () => {
-  const listRes = await listDirPromise();
+  const listRes = await listDirPromiseTest();
 });
 
 
 test('deleteFileTest Test', async () => {
-  const deleteRes = await deleteFileTest();
+  const deleteRes = await deleteFilePromiseTest();
 });
 
 
 test('removeDirTest Test', async () => {
-  const removeRes = await removeDirTest();
+  const removeRes = await removeDirPromiseTest();
 });
 
 
