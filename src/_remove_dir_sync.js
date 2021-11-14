@@ -2,7 +2,8 @@ const fs = require('fs');
 
 const removeDirSync = (dirPath, options = {recursive: true}) => {
   try {
-    return fs.rmSync(dirPath, options);
+    fs.rmSync(dirPath, options);
+    return true;
   } catch (error) {
     return false;
   }

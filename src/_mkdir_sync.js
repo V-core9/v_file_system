@@ -3,7 +3,8 @@ const fs = require('fs');
 mkdirSync = (path, recurse = false) => {
   recurse = recurse == true ? true : false;
   try {
-    return fs.mkdirSync(path, { recursive: recurse });
+    fs.mkdirSync(path, { recursive: recurse });
+    return true;
   } catch (err) {
     //console.warn(err);
     return false;

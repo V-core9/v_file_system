@@ -4,7 +4,7 @@ const readSync = (filePath, encoding = "utf8") => {
   try {
     return  fs.readFileSync( filePath, encoding);
   } catch (error) {
-    console.error(error);
+    //console.error(error);
     return false;
   }
 };

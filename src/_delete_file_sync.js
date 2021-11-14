@@ -5,7 +5,7 @@ const deleteFileSync = (filePath) => {
     fs.unlinkSync(filePath);
     return true;
   } catch(error) {
-    console.error(error);
+    //console.error(error);
     return false;
   }
 };

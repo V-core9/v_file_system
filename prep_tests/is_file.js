@@ -10,7 +10,7 @@ const isDirTest = async () => {
 
 const isFileDirTest = async () => {
   test('Check isFile [OK] ', async () => {
-    expect(await v_fs.isFile(path.join(__dirname, './is_file.test.js'))).toBe(true);
+    expect(await v_fs.isFile(path.join(__dirname, './list_dir_test/sample_file.doc'))).toBe(true);
   });
 };
 
