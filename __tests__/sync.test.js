@@ -17,6 +17,9 @@ syncTest = () => {
   console.log(`Is Dir Sync [file] : ${v_fs.isDirSync(testConfig.testFileNameSync)}`);
   console.log(`Is Dir Sync [dir] : ${v_fs.isDirSync(testConfig.demoDirSync)}`);
 
+  console.log(`Delete File : ${v_fs.deleteFileSync(testConfig.testFileNameSync)}`);
+
+  console.log(`Remove Dir : ${v_fs.removeDirSync(testConfig.demoDirSync)}`);
 };
 
 syncTest();
