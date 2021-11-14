@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const isFileSync = (path = null) => {
+isFile = (path = null) => {
   try {
     return fs.lstatSync(path).isFile();
   } catch (err) {
@@ -9,4 +9,4 @@ const isFileSync = (path = null) => {
   }
 };
 
-module.exports = isFileSync;
+module.exports = isFile;

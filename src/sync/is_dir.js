@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-isDirSync = (path) => {
+isDir = (path) => {
   try {
     const stats = fs.lstatSync(path).isDirectory();
     return stats;
@@ -10,4 +10,4 @@ isDirSync = (path) => {
   }
 };
 
-module.exports = isDirSync;
+module.exports = isDir;

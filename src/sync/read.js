@@ -1,12 +1,12 @@
 const fs = require('fs');
 
-const readSync = (filePath, encoding = "utf8") => {
+read = (filePath, encoding = "utf8") => {
   try {
     return  fs.readFileSync( filePath, encoding);
   } catch (error) {
-    console.error(error);
+    //console.error(error);
     return false;
   }
 };
 
-module.exports = readSync;
+module.exports = read;
