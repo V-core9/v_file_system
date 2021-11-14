@@ -5,7 +5,8 @@
   "main": "dirList.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "dev": "nodemon --exec \"npm run build\""
   },
   "repository": {
     "type": "git",
