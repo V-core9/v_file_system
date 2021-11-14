@@ -16,6 +16,7 @@ const deleteFileSync = require('./_delete_file_sync');
 const deleteFile = require('./_delete_file');
 const removeDirSync = require('./_remove_dir_sync');
 const removeDir = require('./_remove_dir');
+const dirStats = require('./_dir_stats');
 
 const v_fs = {
   config: require('../v_config'),
@@ -37,6 +38,7 @@ const v_fs = {
   deleteFileSync,
   removeDir,
   removeDirSync,
+  dirStats
 };
 
 

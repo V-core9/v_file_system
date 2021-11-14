@@ -19,6 +19,8 @@ Well just load it as a constant...
     
     const v_fs = require('v_fs');
 
+    console.log(v_fs.version());
+
     // ASYNC LIST - - - -
     // Make Directory 
     v_fs.mkdir(path, options = {}, callback = null) ;
