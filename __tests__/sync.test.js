@@ -23,19 +23,19 @@ test('mkdirSync [err]', async () => {
 });
 
 
-test('writeSync [ok]', async () => {
+test('write Sync [ok]', async () => {
   expect(v_fs.sync.write(demoFile, demoText)).toEqual(true);
 });
 
-test('writeSync [ok]', async () => {
+test('write Sync [ok]', async () => {
   expect(v_fs.sync.write(demoFile2, demoText)).toEqual(true);
 });
 
-test('writeSync [bad]', async () => {
+test('write Sync [bad]', async () => {
   expect(v_fs.sync.write(demoDir, demoText)).toEqual(false);
 });
 
-test('writeSync [err]', async () => {
+test('write Sync [err]', async () => {
   expect(v_fs.sync.write()).toEqual(false);
 });
 
