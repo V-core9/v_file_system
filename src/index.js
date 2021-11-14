@@ -1,38 +1,24 @@
-const vTime = (label) => {
-  if (v_fs.config.devMode()) console.time(label);
-};
-
-const vTimeEnd = (label) => {
-  if (v_fs.config.devMode()) console.timeEnd(label);
-};
-
+const v_log = require('./v_log');
+const path = require('path');
+const vTime = v_log.time;
+const vTimeEnd = v_log.timeEnd;
 
 const v_fs = {
-  config: {
-    webpack: require('../webpack.config'),
-    devMode() {
-      return (v_fs.config.webpack.mode === "development") ? true : false;
-    }
-  },
+  config: require(path.join(__dirname,'config')),
   options: {},
   data: {},
   listDir: () => { },
   listDirSync: () => { },
   write: () => { },
   writeSync: () => { },
-  read: () => {
-    vTime("Async Read Start");
-    setTimeout(() => {
-      console.log("YEA MESSAGE!!");
-      vTimeEnd("Async Read Start");
-    }, 2500);
+  read: (path, cb = null) => {
+
+    console.log("YEA MESSAGE!!");
+    cb(path);
+    
   },
   readSync: () => { },
 };
 
-console.log(v_fs);
-console.log(v_fs.config.devMode());
-
-v_fs.read();
 
 module.exports = v_fs;
