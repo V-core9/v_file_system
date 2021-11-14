@@ -1,13 +1,8 @@
 const fs = require('fs').promises;
 
-pathStats = async (typeFS, chPath) => {
+pathStats = async ( chPath) => {
   try {
-    const statsRes = await fs.stat(chPath);
-    if (typeFS === "dir") {
-      return (statsRes.isDirectory()) ? statsRes : false;
-    } else {
-      return (statsRes.isFile()) ? statsRes : false;
-    }
+    return await fs.stat(chPath);
   } catch (error) {
     return false;
   }

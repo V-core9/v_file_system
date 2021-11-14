@@ -27,30 +27,47 @@ readPromiseTest = async () => {
 };
 
 
-statsDirPromiseTest = async () => {
-    expect(await v_fs.promise.statsDir(demoFile)).toEqual(false);
 
+statsDirPromiseTest1 = async () => {
+    expect(await v_fs.promise.statsDir(demoFile)).toEqual(false);
+};
+
+statsDirPromiseTest2 = async () => {
     const fs = require('fs');
     const testVal = fs.statSync(demoDir);
     expect(await v_fs.promise.statsDir(demoDir)).toEqual(testVal);
+};
 
+statsDirPromiseTest3 = async () => {
     expect(await v_fs.promise.statsDir()).toEqual(false);
 };
 
 
-statsFilePromiseTest = async () => {
-    expect(await v_fs.promise.statsFile(demoFile)).toEqual(false);
 
+statsFilePromiseTest1 = async () => {
+    expect(await v_fs.promise.statsFile(demoDir)).toEqual(false);
+};
+
+statsFilePromiseTest2 = async () => {
     const fs = require('fs');
     const testVal = fs.statSync(demoFile);
     expect(await v_fs.promise.statsFile(demoFile)).toEqual(testVal);
+};
 
+statsFilePromiseTest3 = async () => {
     expect(await v_fs.promise.statsFile()).toEqual(false);
 };
 
-isDirPromiseTest = async () => {
+
+isDirPromiseTest1 = async () => {
     expect(await v_fs.promise.isDir(demoFile)).toEqual(false);
+};
+
+isDirPromiseTest2 = async () => {
     expect(await v_fs.promise.isDir(demoDir)).toEqual(true);
+};
+
+isDirPromiseTest3 = async () => {
     expect(await v_fs.promise.isDir()).toEqual(false);
 };
 
@@ -89,16 +106,40 @@ test('readPromise Test', async () => {
   const readRes = await readPromiseTest();
 });
 
-test('statsDirPromise Test', async () => {
-  const dirStatsRes = await statsDirPromiseTest();
+test('dirStatsRes1 Test', async () => {
+  const dirStatsRes = await statsDirPromiseTest1();
 });
 
-test('dirStats Test', async () => {
-  const fileStatsRes = await statsFilePromiseTest();
+test('dirStatsRes2 Test', async () => {
+  const dirStatsRes = await statsDirPromiseTest2();
 });
 
-test('isDirPromise Test', async () => {
-  const isDirRes = await isDirPromiseTest();
+test('dirStatsRes3 Test', async () => {
+  const dirStatsRes = await statsDirPromiseTest3();
+});
+
+test('fileStatsRes1 Test', async () => {
+  const fileStatsRes = await statsFilePromiseTest1();
+});
+
+test('fileStatsRes2 Test', async () => {
+  const fileStatsRes = await statsFilePromiseTest2();
+});
+
+test('fileStatsRes3 Test', async () => {
+  const fileStatsRes = await statsFilePromiseTest3();
+});
+
+test('isDirPromise1 Test', async () => {
+  const isDirRes = await isDirPromiseTest1();
+});
+
+test('isDirPromise2 Test', async () => {
+  const isDirRes = await isDirPromiseTest2();
+});
+
+test('isDirPromise3 Test', async () => {
+  const isDirRes = await isDirPromiseTest3();
 });
 
 test('isFilePromise Test', async () => {
