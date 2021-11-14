@@ -19,11 +19,19 @@ Well just load it as a constant...
     
     const v_fs = require('v_fs');
 
-    // Make Directory - ASYNC [ *path is only required for it to work || defaults >> callback = null & options = {} ]
-    v_fs.mkdir(path, options, callback) ;
+    // ASYNC LIST - - - -
+    // Make Directory 
+    v_fs.mkdir(path, options = {}, callback = null) ;
 
-    // Check git status - ASYNC [ *filePath & *content are required || defaults >> callback = null & encoding = 'utf8' ]
-    v_fs.write(filePath, content, callback, encoding) ;
+    // Write Content To File
+    v_fs.write(filePath, content,  callback = null, encoding = 'utf8') ;
+    
+    // SYNC LIST - - - -
+    // Make Directory
+    v_fs.mkdirSync(path, recurse = false) ;
+
+    // Write Content To File
+    v_fs.writeSync(filePath, content, encoding = 'utf8') ;
     
     ...
 
