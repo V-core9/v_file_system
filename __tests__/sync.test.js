@@ -5,6 +5,7 @@ const demoText = "Yea Some Space Filler [sync]";
 const demoDir = path.join(__dirname, './list_dir_test_sync');
 const demoFile = path.join(demoDir, 'sample_file.doc');
 const demoFile2 = path.join(demoDir, 'sample_file.txt');
+const demoFileRENAME = path.join(demoDir, 'sample_fileRE.doc');
 const testArray = ["sample_file.doc", "sample_file.txt"];
 
 //console.log(v_fs);
@@ -22,19 +23,19 @@ test('mkdirSync [err]', async () => {
 });
 
 
-test('writeSync [ok]', async () => {
+test('write Sync [ok]', async () => {
   expect(v_fs.sync.write(demoFile, demoText)).toEqual(true);
 });
 
-test('writeSync [ok]', async () => {
+test('write Sync [ok]', async () => {
   expect(v_fs.sync.write(demoFile2, demoText)).toEqual(true);
 });
 
-test('writeSync [bad]', async () => {
+test('write Sync [bad]', async () => {
   expect(v_fs.sync.write(demoDir, demoText)).toEqual(false);
 });
 
-test('writeSync [err]', async () => {
+test('write Sync [err]', async () => {
   expect(v_fs.sync.write()).toEqual(false);
 });
 
@@ -56,19 +57,53 @@ test('readSync [err]', async () => {
 
 
 
-test('dirStats [ok]', async () => {
-  expect(v_fs.sync.dirStats(demoFile)).toEqual(false);
+test('statsFile [ok]', async () => {
+  expect(v_fs.sync.statsFile(demoDir)).toEqual(false);
 });
 
 
-test('dirStats [ok]', async () => {
+test('statsFile [ok]', async () => {
+  const fs = require('fs');
+  const testVal = fs.statSync(demoFile);
+  expect(v_fs.sync.statsFile(demoFile)).toEqual(testVal);
+});
+
+test('statsFile [err]', async () => {
+  expect(v_fs.sync.statsFile()).toEqual(false);
+});
+
+
+test('rename [ok]', async () => {
+  expect(v_fs.sync.rename(demoFile,demoFileRENAME )).toEqual(true);
+});
+
+test('rename [ok]', async () => {
+  expect(v_fs.sync.rename(demoFileRENAME,demoFile)).toEqual(true);
+});
+
+test('rename [bad]', async () => {
+  expect(v_fs.sync.rename(demoFileRENAME)).toEqual(false);
+});
+
+
+test('rename [bad]', async () => {
+  expect(v_fs.sync.rename()).toEqual(false);
+});
+
+
+test('statsDir [ok]', async () => {
+  expect(v_fs.sync.statsDir(demoFile)).toEqual(false);
+});
+
+
+test('statsDir [ok]', async () => {
   const fs = require('fs');
   const testVal = fs.statSync(demoDir);
-  expect(v_fs.sync.dirStats(demoDir)).toEqual(testVal);
+  expect(v_fs.sync.statsDir(demoDir)).toEqual(testVal);
 });
 
-test('dirStats [err]', async () => {
-  expect(v_fs.sync.dirStats()).toEqual(false);
+test('statsDir [err]', async () => {
+  expect(v_fs.sync.statsDir()).toEqual(false);
 });
 
 

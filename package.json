@@ -5,6 +5,7 @@
   "main": "dirList.js",
   "scripts": {
     "test": "jest",
+    "write_delete_speed_test": " bash -c \" echo \\\"\\\"- - - - - - - - - - - - - - - - - - - -\\\"\\\" >> write_speed.txt ; node v_tests/write_speed.promise.js >> write_speed.txt ; echo \\\"\\\"- - - - - - - - - - - - - - - - - - - -\\\"\\\" >> write_speed.txt ; node v_tests/write_speed.sync.js >> write_speed.txt \" ",
     "build": "webpack --config webpack.config.js",
     "dev": "nodemon --exec \"npm run build\""
   },
