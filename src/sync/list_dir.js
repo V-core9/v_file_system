@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const listDirSync = (dirPath) =>{
+listDir = (dirPath) =>{
   try {
     return fs.readdirSync(dirPath);
   } catch (error) {
@@ -9,4 +9,4 @@ const listDirSync = (dirPath) =>{
   }
 };
 
-module.exports = listDirSync;
+module.exports = listDir;

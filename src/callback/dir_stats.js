@@ -1,10 +1,10 @@
-const fs = require('fs').promises;
+const fs = require('fs');
 const path = require('path');
-const isDir = require('./_is_dir');
+const isDir = require('./is_dir');
 
-const dirStats = async (dirPath) => {
+dirStats = async (dirPath) => {
   try {
-    const mDir = await isDir(dirPath);
+    isDir(dirPath);
     if (mDir === true) {
       const resp =  await fs.stat(dirPath);
       return resp;

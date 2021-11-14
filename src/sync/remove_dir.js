@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const removeDirSync = (dirPath, options = {recursive: true}) => {
+const removeDir = (dirPath, options = {recursive: true}) => {
   try {
     fs.rmSync(dirPath, options);
     return true;
@@ -9,4 +9,4 @@ const removeDirSync = (dirPath, options = {recursive: true}) => {
   }
 };
 
-module.exports = removeDirSync;
+module.exports = removeDir;

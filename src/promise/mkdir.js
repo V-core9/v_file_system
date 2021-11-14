@@ -1,10 +1,12 @@
-const fs = require('fs');
+const fs = require('fs').promises;
 
-mkdir = async (path, options = {}, callback = null ) => {
-    fs.mkdir(path, options, callback, error => {
-      if(error) return;
-      callback(path);
-    });
+mkdir = async (path, options = {}) => {
+  try {
+    const res = await fs.mkdir(path, options);
+    return true;
+  } catch (error) {
+    return false;
+  }
 };
 
 module.exports = mkdir;

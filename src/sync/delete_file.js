@@ -1,13 +1,13 @@
 const fs = require('fs');
 
-const deleteFileSync = (filePath) => {
+deleteFile = (filePath) => {
   try {
     fs.unlinkSync(filePath);
     return true;
-  } catch(error) {
+  } catch (error) {
     //console.error(error);
     return false;
   }
 };
 
-module.exports = deleteFileSync;
+module.exports = deleteFile;

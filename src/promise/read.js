@@ -1,13 +1,8 @@
-const fs = require('fs');
+const fs = require('fs').promises;
 
-const read = (filePath, callback, encoding = "utf8") => {
+read = async (filePath,  encoding = "utf8") => {
   try {
-    fs.readFile( filePath, encoding, err => {
-      if (err) {
-        return false;
-      }
-      callback(filePath);
-    });
+    return await fs.readFile( filePath, encoding);
   } catch (error) {
     return false;
   }

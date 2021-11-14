@@ -1,17 +1,10 @@
-const fs = require('fs');
+const fs = require('fs').promises;
 
-const write = (filePath, content, callback = null, encoding = "utf8") => {
+write = async (filePath, content, encoding = "utf8") => {
   try {
-    fs.writeFile(filePath, content, encoding, err => {
-      if (err) {
-        //console.error(err);
-        return;
-      }
-      //file written successfully
-      callback(filePath);
-    });
+    const res = await fs.writeFile(filePath, content, encoding);
+    return true;
   } catch (error) {
-    //console.error(error);
     return false;
   }
 };
