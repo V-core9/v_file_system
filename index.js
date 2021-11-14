@@ -1,2 +1,2 @@
-const v_f = require('./src/');
-module.exports = v_f;
+const v_fs = require('./src/');
+module.exports = v_fs;

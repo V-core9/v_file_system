@@ -1,4 +1,4 @@
-const v_f = require('../index');
+const v_fs = require('../index');
 const path = require('path');
 
 const demoText = "Yea Some Space Filler [promise]";
@@ -8,90 +8,90 @@ const demoFile2 = path.join(demoDir, 'sample_file.txt');
 const testArray = ["sample_file.doc", "sample_file.txt"];
 
 mkdirPromiseTest = async () => {
-    expect(await v_f.promise.mkdir(demoFile)).toEqual(false);
-    expect(await v_f.promise.mkdir(demoDir)).toEqual(true);
-    expect(await v_f.promise.mkdir()).toEqual(false);
+    expect(await v_fs.promise.mkdir(demoFile)).toEqual(false);
+    expect(await v_fs.promise.mkdir(demoDir)).toEqual(true);
+    expect(await v_fs.promise.mkdir()).toEqual(false);
 };
 
 writePromiseTest = async () => {
-    expect(await v_f.promise.write(demoFile, demoText)).toEqual(true);
-    expect(await v_f.promise.write(demoFile2, demoText)).toEqual(true);
-    expect(await v_f.promise.write(demoDir, demoText)).toEqual(false);
-    expect(await v_f.promise.write()).toEqual(false);
+    expect(await v_fs.promise.write(demoFile, demoText)).toEqual(true);
+    expect(await v_fs.promise.write(demoFile2, demoText)).toEqual(true);
+    expect(await v_fs.promise.write(demoDir, demoText)).toEqual(false);
+    expect(await v_fs.promise.write()).toEqual(false);
 };
 
 readPromiseTest = async () => {
-    expect(await v_f.promise.read(demoFile)).toEqual(demoText);
-    expect(await v_f.promise.read(demoDir)).toEqual(false);
-    expect(await v_f.promise.read()).toEqual(false);
+    expect(await v_fs.promise.read(demoFile)).toEqual(demoText);
+    expect(await v_fs.promise.read(demoDir)).toEqual(false);
+    expect(await v_fs.promise.read()).toEqual(false);
 };
 
 
 
 statsDirPromiseTest1 = async () => {
-    expect(await v_f.promise.statsDir(demoFile)).toEqual(false);
+    expect(await v_fs.promise.statsDir(demoFile)).toEqual(false);
 };
 
 statsDirPromiseTest2 = async () => {
     const fs = require('fs');
     const testVal = fs.statSync(demoDir);
-    expect(await v_f.promise.statsDir(demoDir)).toEqual(testVal);
+    expect(await v_fs.promise.statsDir(demoDir)).toEqual(testVal);
 };
 
 statsDirPromiseTest3 = async () => {
-    expect(await v_f.promise.statsDir()).toEqual(false);
+    expect(await v_fs.promise.statsDir()).toEqual(false);
 };
 
 
 
 statsFilePromiseTest1 = async () => {
-    expect(await v_f.promise.statsFile(demoDir)).toEqual(false);
+    expect(await v_fs.promise.statsFile(demoDir)).toEqual(false);
 };
 
 statsFilePromiseTest2 = async () => {
     const fs = require('fs');
     const testVal = fs.statSync(demoFile);
-    expect(await v_f.promise.statsFile(demoFile)).toEqual(testVal);
+    expect(await v_fs.promise.statsFile(demoFile)).toEqual(testVal);
 };
 
 statsFilePromiseTest3 = async () => {
-    expect(await v_f.promise.statsFile()).toEqual(false);
+    expect(await v_fs.promise.statsFile()).toEqual(false);
 };
 
 
 isDirPromiseTest1 = async () => {
-    expect(await v_f.promise.isDir(demoFile)).toEqual(false);
+    expect(await v_fs.promise.isDir(demoFile)).toEqual(false);
 };
 
 isDirPromiseTest2 = async () => {
-    expect(await v_f.promise.isDir(demoDir)).toEqual(true);
+    expect(await v_fs.promise.isDir(demoDir)).toEqual(true);
 };
 
 isDirPromiseTest3 = async () => {
-    expect(await v_f.promise.isDir()).toEqual(false);
+    expect(await v_fs.promise.isDir()).toEqual(false);
 };
 
 isFilePromiseTest = async () => {
-    expect(await v_f.promise.isFile(demoFile)).toEqual(true);
-    expect(await v_f.promise.isFile(demoDir)).toEqual(false);
-    expect(await v_f.promise.isFile()).toEqual(false);
+    expect(await v_fs.promise.isFile(demoFile)).toEqual(true);
+    expect(await v_fs.promise.isFile(demoDir)).toEqual(false);
+    expect(await v_fs.promise.isFile()).toEqual(false);
 };
 
 listDirPromiseTest = async () => {
-    expect(await v_f.promise.listDir(demoDir)).toEqual(testArray);
-    expect(await v_f.promise.listDir()).toEqual(false);
+    expect(await v_fs.promise.listDir(demoDir)).toEqual(testArray);
+    expect(await v_fs.promise.listDir()).toEqual(false);
 };
 
 deleteFilePromiseTest = async () => {
-    expect(await v_f.promise.deleteFile(demoFile)).toEqual(true);
-    expect(await v_f.promise.deleteFile(demoDir)).toEqual(false);
-    expect(await v_f.promise.deleteFile()).toEqual(false);
+    expect(await v_fs.promise.deleteFile(demoFile)).toEqual(true);
+    expect(await v_fs.promise.deleteFile(demoDir)).toEqual(false);
+    expect(await v_fs.promise.deleteFile()).toEqual(false);
   };
 
 removeDirPromiseTest = async () => {
-    expect(await v_f.promise.removeDir(demoFile)).toEqual(false);
-    expect(await v_f.promise.removeDir(demoDir)).toEqual(true);
-    expect(await v_f.promise.removeDir()).toEqual(false);
+    expect(await v_fs.promise.removeDir(demoFile)).toEqual(false);
+    expect(await v_fs.promise.removeDir(demoDir)).toEqual(true);
+    expect(await v_fs.promise.removeDir()).toEqual(false);
 };
 
 test('mkdirPromise Test', async () => {

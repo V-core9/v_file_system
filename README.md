@@ -1,5 +1,5 @@
-# 🔽 v_f 
-[![njsscan sarif](https://github.com/V-core9/v_f/actions/workflows/njsscan-analysis.yml/badge.svg)](https://github.com/V-core9/v_f/actions/workflows/njsscan-analysis.yml) [![OSSAR](https://github.com/V-core9/v_f/actions/workflows/ossar-analysis.yml/badge.svg)](https://github.com/V-core9/v_f/actions/workflows/ossar-analysis.yml)
+# 🔽 v_file_system => v_fs 
+[![njsscan sarif](https://github.com/V-core9/v_fs/actions/workflows/njsscan-analysis.yml/badge.svg)](https://github.com/V-core9/v_fs/actions/workflows/njsscan-analysis.yml) [![OSSAR](https://github.com/V-core9/v_fs/actions/workflows/ossar-analysis.yml/badge.svg)](https://github.com/V-core9/v_fs/actions/workflows/ossar-analysis.yml)
 > **[.v.]** *Node Module* File System Handler
 
 ## ➿ How To Install  
@@ -8,7 +8,7 @@ Add this repo git URL into dependencies in your projects package.json.
 
     ...
     "dependencies": {
-      "v_f":"https://github.com/V-core9/v_f.git"  
+      "v_fs":"https://github.com/V-core9/v_fs.git"  
     },
     ...
 
@@ -18,19 +18,19 @@ Well just load it as a constant...
 
     ...
     
-    const v_f = require('v_f');
+    const v_fs = require('v_fs');
 
     // ASYNC  - - - -
     
-    v_f.promise.mkdir(path, options = {}, callback = null) ;
+    v_fs.promise.mkdir(path, options = {}, callback = null) ;
 
-    v_f.promise.write(filePath, content,  callback = null, encoding = 'utf8') ;
+    v_fs.promise.write(filePath, content,  callback = null, encoding = 'utf8') ;
     
     // SYNC  - - - -
     
-    v_f.sync.mkdir(path, recurse = false) ;
+    v_fs.sync.mkdir(path, recurse = false) ;
 
-    v_f.sync.write(filePath, content, encoding = 'utf8') ;
+    v_fs.sync.write(filePath, content, encoding = 'utf8') ;
     
     ...
 
