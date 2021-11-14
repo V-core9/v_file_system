@@ -20,18 +20,52 @@ Well just load it as a constant...
     
     const v_fs = require('v_file_system');
 
-    // ASYNC  - - - -
-    
-    v_fs.promise.mkdir(path, options = {}, callback = null) ;
-
-    v_fs.promise.write(filePath, content,  callback = null, encoding = 'utf8') ;
+    // ASYNC  - - - -    
+    v_fs.promise.mkdir(path, options = {}) ;
+    v_fs.promise.write(filePath, content, encoding = 'utf8') ;
+    v_fs.promise.deleteFile (filePath);
+    v_fs.promise.isDir (dirPath);
+    v_fs.promise.isFile (filePath);
+    v_fs.promise.mkdir (path, options = {});
+    v_fs.promise.read (filePath,  encoding = "utf8");
+    v_fs.promise.removeDir (dirPath, options = {recursive: true});
+    v_fs.promise.statsDir (dirPath);
+    v_fs.promise.statsFile (filePath);
     
     // SYNC  - - - -
-    
-    v_fs.sync.mkdir(path, recurse = false) ;
-
+    v_fs.sync.mkdir(path, options = {}) ;
     v_fs.sync.write(filePath, content, encoding = 'utf8') ;
+    v_fs.sync.deleteFile (filePath);
+    v_fs.sync.isDir (dirPath);
+    v_fs.sync.isFile (filePath);
+    v_fs.sync.mkdir (path, options = {});
+    v_fs.sync.read (filePath,  encoding = "utf8");
+    v_fs.sync.removeDir (dirPath, options = {recursive: true});
+    v_fs.sync.statsDir (dirPath);
+    v_fs.sync.statsFile (filePath);
     
+    // ByteSizer - - - -     
+    v_fs.byteSizer.byteToKilo(size)
+    v_fs.byteSizer.byteToMega(size)
+    v_fs.byteSizer.byteToGiga(size)
+    v_fs.byteSizer.byteToTera(size)
+    v_fs.byteSizer.kiloToByte(size)
+    v_fs.byteSizer.kiloToMega(size)
+    v_fs.byteSizer.kiloToGiga(size)
+    v_fs.byteSizer.kiloToTera(size)
+    v_fs.byteSizer.megaToByte(size)
+    v_fs.byteSizer.megaToKilo(size)
+    v_fs.byteSizer.megaToGiga(size)
+    v_fs.byteSizer.megaToTera(size)
+    v_fs.byteSizer.gigaToByte(size)
+    v_fs.byteSizer.gigaToKilo(size)
+    v_fs.byteSizer.gigaToMega(size)
+    v_fs.byteSizer.gigaToTera(size)
+    v_fs.byteSizer.teraToByte(size)
+    v_fs.byteSizer.teraToKilo(size)
+    v_fs.byteSizer.teraToMega(size)
+    v_fs.byteSizer.teraToGiga(size)
+
     ...
 
 ## ✅ Test Results and Coverage with Jest

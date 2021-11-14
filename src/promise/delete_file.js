@@ -1,6 +1,6 @@
 const fs = require('fs').promises;
 
-const deleteFile = async (filePath) => {
+deleteFile = async (filePath) => {
   try {
     const stat = await fs.unlink(filePath);
     return true;

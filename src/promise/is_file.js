@@ -1,10 +1,9 @@
 const fs = require('fs').promises;
 
-const isFile = async (filePath) => {
+isFile = async (filePath) => {
   try {
     const stat = await fs.lstat(filePath);
-    const isFileRes = stat.isFile();
-    return isFileRes;
+    return stat.isFile();
   } catch (error) {
     return false;
   }

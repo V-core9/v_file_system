@@ -1,9 +1,8 @@
 const fs = require('fs').promises;
 
-const listDir = async (dirPath) => {
+listDir = async (dirPath) => {
   try {
-    const files = await fs.readdir(dirPath);
-    return files;
+    return await fs.readdir(dirPath);
   } catch (error) {
     return false;
   }
