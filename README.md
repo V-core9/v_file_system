@@ -37,6 +37,12 @@ Well just load it as a constant...
     
     ...
 
+## ✅ Test Results and Coverage with Jest
+
+![Test and Coverage with Jest](v_fs_test.png)
+
+---
+
 ### 👻 Author: **-<[\_.⟁.\_]>-**  
 
 ### ⏰ CreatedTime: 11.08.2021 @ 21:51  
