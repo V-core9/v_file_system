@@ -1,8 +1,8 @@
 {
-  "name": "v_dir_list",
+  "name": "v_fs",
   "version": "1.0.0",
   "description": "[.v.] Node Directory listing using readdir() from fs module.",
-  "main": "dirList.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest",
     "write_delete_speed_test": " bash -c \" echo \\\"\\\"- - - - - - - - - - - - - - - - - - - -\\\"\\\" >> write_speed.txt ; node v_tests/write_speed.promise.js >> write_speed.txt ; echo \\\"\\\"- - - - - - - - - - - - - - - - - - - -\\\"\\\" >> write_speed.txt ; node v_tests/write_speed.sync.js >> write_speed.txt \" ",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/V-tech-tools/v_dir_list.git"
+    "url": "git+https://github.com/V-core9/v_fs.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/V-tech-tools/v_dir_list/issues"
+    "url": "https://github.com/V-core9/v_fs/issues"
   },
-  "homepage": "https://github.com/V-tech-tools/v_dir_list#readme",
+  "homepage": "https://github.com/V-core9/v_fs#readme",
   "devDependencies": {
     "jest": "^27.3.1",
     "nodemon": "^2.0.15",
