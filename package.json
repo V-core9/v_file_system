@@ -5,7 +5,7 @@
   "main": "dirList.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack --config prod.config.js"
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
