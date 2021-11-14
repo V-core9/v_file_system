@@ -6,7 +6,7 @@ const isDir = async (dirPath) => {
     const result  = stat.isDirectory();
     return result;
   } catch (error) {
-    console.error(error);
+    //console.error(error);
     return false;
   }
 };

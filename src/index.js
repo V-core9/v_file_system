@@ -1,5 +1,4 @@
 const fs = require('fs');
-const {v_log} = require('../v_log');
 const read = require('./_read');
 const readSync = require('./_read_sync');
 const write = require('./_write');
@@ -17,11 +16,13 @@ const deleteFile = require('./_delete_file');
 const removeDirSync = require('./_remove_dir_sync');
 const removeDir = require('./_remove_dir');
 const dirStats = require('./_dir_stats');
+const byteSizer = require('./helpers/byte_sizer');
 
 const v_fs = {
-  config: require('../v_config'),
+  config: {},
   options: {},
   data: {},
+  byteSizer,
   listDir,
   listDirSync,
   write,
