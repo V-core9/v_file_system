@@ -13,6 +13,7 @@ const isFileSync = require('./_is_file_sync');
 const isDir = require('./_is_dir');
 const isDirSync = require('./_is_dir_sync');
 const deleteFileSync = require('./_delete_file_sync');
+const deleteFile = require('./_delete_file');
 
 const v_fs = {
   config: require('../v_config'),
