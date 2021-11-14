@@ -1,5 +1,5 @@
 {
-  "name": "v_fs",
+  "name": "v_f",
   "version": "1.0.0",
   "description": "[.v.] Node Directory listing using readdir() from fs module.",
   "main": "index.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/V-core9/v_fs.git"
+    "url": "git+https://github.com/V-core9/v_f.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/V-core9/v_fs/issues"
+    "url": "https://github.com/V-core9/v_f/issues"
   },
-  "homepage": "https://github.com/V-core9/v_fs#readme",
+  "homepage": "https://github.com/V-core9/v_f#readme",
   "devDependencies": {
     "jest": "^27.3.1",
     "nodemon": "^2.0.15",
