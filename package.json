@@ -1,6 +1,6 @@
 {
   "name": "v_file_system",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "[.v.] Node Directory listing using readdir() from fs module.",
   "main": "index.js",
   "scripts": {
