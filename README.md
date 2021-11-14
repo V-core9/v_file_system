@@ -15,15 +15,17 @@ Add this repo git URL into dependencies in your projects package.json.
 
 Well just load it as a constant...
 
-  const v_fs = require('v_fs');
+    ...
+    
+    const v_fs = require('v_fs');
 
-  // Make Directory - ASYNC [ *path is only required for it to work || defaults >> callback = null & options = {} ]
-  v_fs.mkdir(path, options, callback) ;
+    // Make Directory - ASYNC [ *path is only required for it to work || defaults >> callback = null & options = {} ]
+    v_fs.mkdir(path, options, callback) ;
 
-  // Check git status - ASYNC [ *filePath & *content are required || defaults >> callback = null & encoding = 'utf8' ]
-  v_fs.write(filePath, content, callback, encoding) ;
-
-...
+    // Check git status - ASYNC [ *filePath & *content are required || defaults >> callback = null & encoding = 'utf8' ]
+    v_fs.write(filePath, content, callback, encoding) ;
+    
+    ...
 
 ### 👻 Author: **-<[\_.⟁.\_]>-**  
 
