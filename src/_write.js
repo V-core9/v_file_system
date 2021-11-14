@@ -1,8 +1,8 @@
 const fs = require('fs');
 
-const write = (filePath, content, callback, encoding = "utf8") => {
+const write = (filePath, content, callback = null, encoding = "utf8") => {
   try {
-    fs.writeFile( filePath, content, encoding, err => {
+    fs.writeFile(filePath, content, encoding, err => {
       if (err) {
         //console.error(err);
         return;
