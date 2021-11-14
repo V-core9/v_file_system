@@ -16,6 +16,9 @@ asyncTest = async () => {
 
   v_fs.isDir(testConfig.testFileName, console.log);
   v_fs.isDir(testConfig.demoDir, console.log);
+
+  
+  v_fs.deleteFile(testConfig.testFileName, console.log);
   
 };
 

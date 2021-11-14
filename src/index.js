@@ -30,6 +30,7 @@ const v_fs = {
   isFileSync,
   isDir,
   isDirSync,
+  deleteFile,
   deleteFileSync,
 };
 
