@@ -41,7 +41,6 @@ test('write Sync [err]', async () => {
 
 
 
-
 test('readSync [ok]', async () => {
   expect(v_fs.sync.read(demoFile)).toEqual(demoText);
 });
@@ -53,7 +52,6 @@ test('readSync [bad]', async () => {
 test('readSync [err]', async () => {
   expect(v_fs.sync.read()).toEqual(false);
 });
-
 
 
 
@@ -71,6 +69,7 @@ test('statsFile [ok]', async () => {
 test('statsFile [err]', async () => {
   expect(v_fs.sync.statsFile()).toEqual(false);
 });
+
 
 
 test('rename [ok]', async () => {
@@ -91,10 +90,10 @@ test('rename [bad]', async () => {
 });
 
 
+
 test('statsDir [ok]', async () => {
   expect(v_fs.sync.statsDir(demoFile)).toEqual(false);
 });
-
 
 test('statsDir [ok]', async () => {
   const fs = require('fs');
@@ -105,7 +104,6 @@ test('statsDir [ok]', async () => {
 test('statsDir [err]', async () => {
   expect(v_fs.sync.statsDir()).toEqual(false);
 });
-
 
 
 
@@ -137,7 +135,6 @@ test('isFileSync [err]', async () => {
 
 
 
-
 test('listDirSync [ok]', async () => {
   expect(v_fs.sync.listDir(demoDir)).toEqual(testArray);
 });
@@ -145,10 +142,6 @@ test('listDirSync [ok]', async () => {
 test('listDirSync [emptyPath=>error]', async () => {
   expect(v_fs.sync.listDir()).toEqual(false);
 });
-
-
-
-
 
 
 
@@ -166,8 +159,6 @@ test('deleteFileSync [err]', async () => {
 
 
 
-
-
 test('removeDirSync [bad]', async () => {
   expect(v_fs.sync.removeDir(demoFile)).toEqual(false);
 });
@@ -179,14 +170,3 @@ test('removeDirSync [bad]', async () => {
 test('removeDirSync [err]', async () => {
   expect(v_fs.sync.removeDir()).toEqual(false);
 });
-
-
-
-
-
-
-
-
-
-
-
