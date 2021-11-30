@@ -1,3 +1,3 @@
-const writeCount = 5000;
+const writeCount = 125000;
 
 module.exports = writeCount;
