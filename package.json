@@ -1,13 +1,11 @@
 {
   "name": "v_file_system",
   "version": "1.0.1",
-  "description": "[.v.] Node Directory listing using readdir() from fs module.",
+  "description": "Safe and easy way to read, write and delete files and directories.",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "write_delete_speed_test": " bash -c \" echo \\\"\\\"- - - - - - - - - - - - - - - - - - - -\\\"\\\" >> write_speed.txt ; node v_tests/write_speed.promise.js >> write_speed.txt ; echo \\\"\\\"- - - - - - - - - - - - - - - - - - - -\\\"\\\" >> write_speed.txt ; node v_tests/write_speed.sync.js >> write_speed.txt \" ",
-    "build": "webpack --config webpack.config.js",
-    "dev": "nodemon --exec \"npm run build\""
+    "write_delete_speed_test": " bash -c \" echo \\\"\\\"- - - - - - - - - - - - - - - - - - - -\\\"\\\" >> write_speed.txt ; node v_tests/write_speed.promise.js >> write_speed.txt ; echo \\\"\\\"- - - - - - - - - - - - - - - - - - - -\\\"\\\" >> write_speed.txt ; node v_tests/write_speed.sync.js >> write_speed.txt \" "
   },
   "repository": {
     "type": "git",
@@ -22,8 +20,6 @@
   "homepage": "https://github.com/V-core9/v_fs#readme",
   "devDependencies": {
     "jest": "^27.3.1",
-    "nodemon": "^2.0.15",
-    "webpack": "^5.64.0",
-    "webpack-cli": "^4.9.1"
+    "nodemon": "^2.0.15"
   }
 }
