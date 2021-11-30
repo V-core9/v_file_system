@@ -21,6 +21,19 @@ Well just load it as a constant...
     const v_fs = require('v_file_system');
 
     // ASYNC  - - - -    
+    // v_fs.{methodName}
+    v_fs.mkdir(path, options = {}) ;
+    v_fs.write(filePath, content, encoding = 'utf8') ;
+    v_fs.deleteFile (filePath);
+    v_fs.isDir (dirPath);
+    v_fs.isFile (filePath);
+    v_fs.mkdir (path, options = {});
+    v_fs.read (filePath,  encoding = "utf8");
+    v_fs.removeDir (dirPath, options = {recursive: true});
+    v_fs.statsDir (dirPath);
+    v_fs.statsFile (filePath);
+ 
+    // v_fs.promise.{methodName}
     v_fs.promise.mkdir(path, options = {}) ;
     v_fs.promise.write(filePath, content, encoding = 'utf8') ;
     v_fs.promise.deleteFile (filePath);
@@ -32,7 +45,20 @@ Well just load it as a constant...
     v_fs.promise.statsDir (dirPath);
     v_fs.promise.statsFile (filePath);
     
-    // SYNC  - - - -
+    // SYNC    
+    // v_fs.{methodName + "Sy"}  - - - -
+    v_fs.mkdirSy (path, options = {}) ;
+    v_fs.writeSy (filePath, content, encoding = 'utf8') ;
+    v_fs.deleteFileSy (filePath);
+    v_fs.isDirSy (dirPath);
+    v_fs.isFileSy (filePath);
+    v_fs.mkdirSy (path, options = {});
+    v_fs.readSy (filePath,  encoding = "utf8");
+    v_fs.removeDirSy (dirPath, options = {recursive: true});
+    v_fs.statsDirSy (dirPath);
+    v_fs.statsFileSy (filePath);
+
+    // v_fs.sync.{methodName}
     v_fs.sync.mkdir(path, options = {}) ;
     v_fs.sync.write(filePath, content, encoding = 'utf8') ;
     v_fs.sync.deleteFile (filePath);
