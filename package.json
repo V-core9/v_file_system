@@ -4,14 +4,13 @@
   "description": "Safe and easy way to read, write and delete files and directories.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "write_delete_speed_test": " bash -c \" echo \\\"\\\"- - - - - - - - - - - - - - - - - - - -\\\"\\\" >> write_speed.txt ; node v_tests/write_speed.promise.js >> write_speed.txt ; echo \\\"\\\"- - - - - - - - - - - - - - - - - - - -\\\"\\\" >> write_speed.txt ; node v_tests/write_speed.sync.js >> write_speed.txt \" "
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/V-core9/v_fs.git"
   },
-  "keywords": [],
+  "keywords": ["fs","promise","sync","file","directory","read","write","delete","file system", "file system sync", "file system promise", "file system async"],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -19,7 +18,6 @@
   },
   "homepage": "https://github.com/V-core9/v_fs#readme",
   "devDependencies": {
-    "jest": "^27.3.1",
-    "nodemon": "^2.0.15"
+    "jest": "^27.3.1"
   }
 }
