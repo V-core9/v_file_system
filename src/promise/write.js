@@ -2,7 +2,7 @@ const fs = require('fs').promises;
 
 write = async (filePath, content, encoding = "utf8") => {
   try {
-    const res = await fs.writeFile(filePath, content, encoding);
+    await fs.writeFile(filePath, content, encoding);
     return true;
   } catch (error) {
     return false;

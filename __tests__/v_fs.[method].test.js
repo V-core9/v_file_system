@@ -7,6 +7,8 @@ const demoFile = path.join(demoDir, 'sample_fileMETHOD.doc');
 const demoFile2 = path.join(demoDir, 'sample_fileMETHOD2.txt');
 const testArray = ["sample_fileMETHOD.doc", "sample_fileMETHOD2.txt"];
 
+const copyFile = path.join(demoDir, 'copy_fileMETHOD.doc');
+
 
 
 
@@ -114,6 +116,24 @@ test('isFilePromise Test 3', async () => {
   expect(await v_fs.isFile()).toEqual(false);
 });
 
+
+
+test('copy Test 1', async () => {
+  expect(await v_fs.copy()).toEqual(false);
+});
+
+test('copy Test 2', async () => {
+  expect(await v_fs.copy(demoFile)).toEqual(false);
+});
+
+test('copy Test 3', async () => {
+  expect(await v_fs.copy(demoFile, copyFile)).toEqual(true);
+});
+
+
+test('deleteFileTest Test 00', async () => {
+  expect(await v_fs.deleteFile(copyFile)).toEqual(true);
+});
 
 
 test('listDirPromise Test 1', async () => {

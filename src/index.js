@@ -12,6 +12,7 @@ const v_fs = {
   //* uses promise methods from folder 
   promise,
 
+  copy : promise.copy ,
   read : promise.read ,
   write : promise.write ,
   listDir : promise.listDir ,

@@ -1,5 +1,6 @@
 
 const read = require('./read');
+const copy = require('./copy');
 const write = require('./write');
 const listDir = require('./list_dir');
 const mkdir = require('./mkdir');
@@ -11,6 +12,7 @@ const statsDir = require('./stats_dir');
 const statsFile = require('./stats_file');
 
 module.exports = {
+  copy,
   read,
   write,
   listDir,
