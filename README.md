@@ -37,6 +37,7 @@ Well just load it as a constant...
     v_fs.removeDir (dirPath, options = {recursive: true});
     v_fs.statsDir (dirPath);
     v_fs.statsFile (filePath);
+    v_fs.copy (filePath, destinationPath);
 
  
 ### 🔹 v_fs.promise.{methodName}
@@ -50,6 +51,7 @@ Well just load it as a constant...
     v_fs.promise.removeDir (dirPath, options = {recursive: true});
     v_fs.promise.statsDir (dirPath);
     v_fs.promise.statsFile (filePath);
+    v_fs.promise.copy (filePath, destinationPath);
     
 ---
 
