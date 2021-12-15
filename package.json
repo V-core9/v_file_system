@@ -1,11 +1,11 @@
 {
   "name": "v_file_system",
-  "version": "1.0.4",
-  "description": "Safe and easy way to read, write and delete files and directories.",
+  "version": "1.0.5",
+  "description": "Safe and easy way to read, write and delete files and directories....plus few additional things.",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "prepack": "npm run test && node $_help/"
+    "prepack": "npm run test"
   },
   "repository": {
     "type": "git",
