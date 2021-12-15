@@ -1,23 +1,38 @@
 {
   "name": "v_file_system",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Safe and easy way to read, write and delete files and directories.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepack": "npm run test && node $_help/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/V-core9/v_fs.git"
+    "url": "git+https://github.com/V-core9/v_file_system.git"
   },
-  "keywords": ["fs","promise","sync","file","directory","read","write","delete","file system", "file system sync", "file system promise", "file system async"],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "fs",
+    "promise",
+    "sync",
+    "file",
+    "directory",
+    "read",
+    "write",
+    "delete",
+    "file system",
+    "file system sync",
+    "file system promise",
+    "file system async"
+  ],
+  "author": "V-core9",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/V-core9/v_fs/issues"
+    "url": "https://github.com/V-core9/v_file_system/issues"
   },
-  "homepage": "https://github.com/V-core9/v_fs#readme",
+  "homepage": "https://github.com/V-core9/v_file_system#readme",
   "devDependencies": {
-    "jest": "^27.3.1"
+    "jest": "^27.3.1",
+    "v_scrolls": "^0.1.12"
   }
 }
